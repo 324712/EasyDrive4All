@@ -19,4 +19,3 @@ Route::get('/', [AppController::class, 'index'])->name('index');
 Route::get('login', [AppController::class, 'login'])->name('login');
 Route::get('register', [AppController::class, 'register'])->name('register');
 Route::get('lessons', [LessonsController::class, 'index'])->name('lessons');
-
