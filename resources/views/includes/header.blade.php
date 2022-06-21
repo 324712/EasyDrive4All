@@ -27,6 +27,20 @@
                             Rijles inplannen
                         </a>
                     </li>
+
+                    <li>
+                        <a href="{{ route('cars.index') }}" class="nav-link {{ checkActive('cars.index') }}">
+                            <i class="far fa-cars fa-fw bi d-block mx-auto mb-1"></i>
+                            Problemen
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{ route('cars.archive') }}" class="nav-link {{ checkActive('cars.archive') }}">
+                            <i class="far fa-archive fa-fw bi d-block mx-auto mb-1"></i>
+                            Problemen Archief
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
