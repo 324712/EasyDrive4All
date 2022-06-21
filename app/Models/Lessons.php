@@ -14,6 +14,10 @@ class Lessons extends Model
      */
     protected $table = 'lessons';
 
+    protected $fillable = [
+        'lesson_type', 'student_id', 'instructor_id', 'location', 'date', 'begin_time', 'end_time', 'information'
+    ];
+
     /*
      * Een relatie aanmaken van de lessons table met de lessons_type table gebaseerd op de lesson type id.
      */
