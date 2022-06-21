@@ -14,6 +14,9 @@ class Lessons extends Model
      */
     protected $table = 'lessons';
 
+    /*
+     * Laat Laravel weten welke tabellen er ingevuld mogen worden in de database.
+     */
     protected $fillable = [
         'lesson_type', 'student_id', 'instructor_id', 'location', 'date', 'begin_time', 'end_time', 'information'
     ];
