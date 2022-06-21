@@ -15,14 +15,15 @@ return new class extends Migration
     {
         Schema::create('lessons', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('lesson_type');
-            $table->foreignId('student_id');
-            $table->foreignId('instructor_id');
+            $table->foreignId('lesson_type')->default(1);
+            $table->foreignId('student_id')->default(1);
+            $table->foreignId('instructor_id')->default(10);
             $table->string('location');
-            $table->date('date');
-            $table->time('begin_time');
-            $table->time('end_time');
-            $table->mediumText('information');
+            $table->string('date');
+            $table->string('begin_time');
+            $table->string('end_time');
+            $table->mediumText('information')->nullable();
+            $table->integer('visible')->default(1);
             $table->timestamps();
         });
     }
