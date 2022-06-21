@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             LessonTypeSeeder::class,
             UserTypeSeeder::class,
             UsersSeeder::class,
+            CarsSeeder::class,
         ]);
     }
 }
