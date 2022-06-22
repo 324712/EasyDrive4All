@@ -32,6 +32,7 @@
                             <li class="list-group-item">
                                 <div class="d-grid gap-2">
                                     <a class="btn btn-secondary" href="{{ route('lessons.edit', $lesson->id) }}" role="button">Aanpassen</a>
+                                    <a class="btn btn-warning" href="{{ route('lessons.location', $lesson->id) }}" role="button">Alternatieve ophaallocatie opgeven</a>
                                     <a class="btn btn-danger" href="{{ route('lessons.delete', $lesson->id) }}" role="button">Annuleren</a>
                                 </div>
                             </li>
