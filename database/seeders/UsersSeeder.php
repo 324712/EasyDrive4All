@@ -20,6 +20,7 @@ class UsersSeeder extends Seeder
             'email'     =>  'hannelonebom@outlook.com',
             'password'  =>  bcrypt('Drive4All'),
             'fullname'  =>  'Hannelore Bom',
+            'location'  =>  'Privelaan 300, 0000 AB Utrecht',
             'lessons'   =>  20,
         ]);
 
@@ -28,6 +29,7 @@ class UsersSeeder extends Seeder
             'email'     =>  'saidavanvuure@outlook.com',
             'password'  =>  bcrypt('Drive4All'),
             'fullname'  =>  'Saida van Vuure',
+            'location'  =>  'Privelaan 300, 0000 AB Utrecht',
             'lessons'   =>  25,
         ]);
 
@@ -36,6 +38,7 @@ class UsersSeeder extends Seeder
             'email'     =>  'meghanvandenelshout@outlook.com',
             'password'  =>  bcrypt('Drive4All'),
             'fullname'  =>  'Meghan van den Elshout',
+            'location'  =>  'Privelaan 300, 0000 AB Utrecht',
             'lessons'   =>  30,
         ]);
 
@@ -44,6 +47,7 @@ class UsersSeeder extends Seeder
             'email'     =>  'lottiemeerkerk@outlook.com',
             'password'  =>  bcrypt('Drive4All'),
             'fullname'  =>  'Lottie Meerkerk',
+            'location'  =>  'Overweg 7, 3678 LL Nieuwegein',
             'lessons'   =>  20,
         ]);
 
@@ -52,14 +56,16 @@ class UsersSeeder extends Seeder
             'email'     =>  'egbertusvandenhoven@outlook.com',
             'password'  =>  bcrypt('Drive4All'),
             'fullname'  =>  'Egbertus van den Hoven',
+            'location'  =>  'Groenlo 44, 3822 AS Houten',
             'lessons'   =>  25,
         ]);
 
         User::create([
             'user_type' =>  1,
-            'email'     =>  'nasimvanderkruit@outlook.com',
+            'email'     =>  'indyhaan@outlook.com',
             'password'  =>  bcrypt('Drive4All'),
-            'fullname'  =>  'Nasim van der Kruit',
+            'fullname'  =>  'Indy Haan',
+            'location'  =>  'Laan 45, 3950 UV Utrecht',
             'lessons'   =>  30,
         ]);
 
@@ -68,6 +74,7 @@ class UsersSeeder extends Seeder
             'email'     =>  'qassim@autorijschooleasydrive4all.nl',
             'password'  =>  bcrypt('Drive4All'),
             'fullname'  =>  'Qassim Kurdi',
+            'location'  =>  'Privelaan 300, 0000 AB Utrecht',
             'lessons'   =>  0,
         ]);
 
@@ -76,6 +83,7 @@ class UsersSeeder extends Seeder
             'email'     =>  'arjan@autorijschooleasydrive4all.nl',
             'password'  =>  bcrypt('Drive4All'),
             'fullname'  =>  'Arjan de Ruijter',
+            'location'  =>  'Privelaan 300, 0000 AB Utrecht',
             'lessons'   =>  0,
         ]);
 
@@ -84,6 +92,7 @@ class UsersSeeder extends Seeder
             'email'     =>  'jesse@autorijschooleasydrive4all.nl',
             'password'  =>  bcrypt('Drive4All'),
             'fullname'  =>  'Jesse Malotaux',
+            'location'  =>  'Privelaan 300, 0000 AB Utrecht',
             'lessons'   =>  0,
         ]);
 
@@ -92,6 +101,7 @@ class UsersSeeder extends Seeder
             'email'     =>  'mitchel@autorijschooleasydrive4all.nl',
             'password'  =>  bcrypt('Drive4All'),
             'fullname'  =>  'Mitchel Jansen',
+            'location'  =>  'Privelaan 300, 0000 AB Utrecht',
             'lessons'   =>  0,
         ]);
     }
