@@ -43,11 +43,11 @@
                         <select class="form-select @error('student_id') is-invalid @enderror" id="student_id" name="student_id" aria-label="student_id" required>
                             <option selected disabled>Maak een keuze</option>
                             <option value="1">Hannelore Bom</option>
-                            <option value="2">Saida van Vuure</option>
+                            <option value="2">Elise van Vuure</option>
                             <option value="3">Meghan van den Elshout</option>
                             <option value="4">Lottie Meerkerk</option>
                             <option value="5">Egbertus van den Hoven</option>
-                            <option value="6">Nasim van der Kruit</option>
+                            <option value="6">Indy Haan</option>
                         </select>
                         <label for="student_id">Welke student?</label>
                     </div>
