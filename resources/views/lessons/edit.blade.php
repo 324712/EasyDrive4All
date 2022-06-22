@@ -47,11 +47,11 @@
                             <option selected value="{{ $lesson->student->id }}">{{ $lesson->student->fullname }}</option>
                             <option disabled>Maak een keuze</option>
                             <option value="1">Hannelore Bom</option>
-                            <option value="2">Saida van Vuure</option>
+                            <option value="2">Elise van Vuure</option>
                             <option value="3">Meghan van den Elshout</option>
                             <option value="4">Lottie Meerkerk</option>
                             <option value="5">Egbertus van den Hoven</option>
-                            <option value="6">Nasim van der Kruit</option>
+                            <option value="6">Indy Haan</option>
                         </select>
                         <label for="student_id">Welke student?</label>
                     </div>
