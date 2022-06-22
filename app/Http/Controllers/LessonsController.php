@@ -19,7 +19,7 @@ class LessonsController extends Controller
          * Als er veel data aanwezig is dient deze niet direct opgehaald te worden, maar pas gecollect te worden als hier
          * om gevraagd word.
          */
-        $lessons = Lessons::with('lessonType')->where('visible', '1')->orderBy('created_at', 'desc')->lazy()->collect();
+        $lessons = Lessons::with('lessonType')->where('visible', '1')->orderBy('date', 'asc')->lazy()->collect();
 
         /*
          * Return de view naar de bezoeker met de opgehaalde data uit $lessons.
@@ -169,5 +169,43 @@ class LessonsController extends Controller
          * Als je dat succesvol hebt gedaan, word je terug gestuurd naar het overzicht met een melding.
          */
         return redirect()->route('lessons.archive')->with('success', 'Rijles succesvol terugehaald uit archief');
+    }
+
+    /*
+     * Genereer de view van de pagina waar je een alternatieve locatie kan opgeven.
+     * Makkelijk gezegd: Zorg dat de URL werkt om de pagina voor de reservering bewerken te zien met de beschikbare routes.
+     */
+    public function location(Request $request, $id)
+    {
+        /*
+         * Haal uit de database de juiste gegevens op van de rijles die we willen aanpassen.
+         */
+        $lessons = Lessons::where('id', $id)->firstOrFail();
+
+        /*
+         * Wanneer gebruiker op de submit klopt drukt, controleren we of de velden voldoen aan onze vereisten.
+         */
+        if($request->isMethod('post')) {
+            $attributes = request()->validate( [
+                'location'              => ['required', 'min:3', 'max:100'],
+            ]);
+
+            /*
+             * Als alles klopt, slaan we alle ingevulden velden op in de database.
+             */
+            Lessons::where('id', $id)->update($attributes);
+
+            /*
+             * Als we alles opgeslagen hebben, linken we terug naar het overzicht.
+             */
+            return redirect()->route('lessons.index')->with('success', 'Je hebt succesvol een alternatieve locatie opgegeven!');
+        }
+
+        /*
+         * Return de view naar de gebruiker om het formulier in te kunnen vullen met de juiste waarde van $lesson.
+         */
+        return view('lessons.location')->with([
+            'lessons'   =>  $lessons,
+        ]);
     }
 }
