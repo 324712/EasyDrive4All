@@ -1,5 +1,5 @@
 @extends('layout.app')
-@section('pagename', 'Lessons')
+@section('pagename', 'Archief')
 
 @section('content')
     @include('includes.header')
@@ -31,15 +31,14 @@
                             <li class="list-group-item"><strong>Ophaallocatie:</strong> {{ $lesson->location }}</li>
                             <li class="list-group-item">
                                 <div class="d-grid gap-2">
-                                    <a class="btn btn-secondary" href="{{ route('lessons.edit', $lesson->id) }}" role="button">Aanpassen</a>
-                                    <a class="btn btn-danger" href="{{ route('lessons.delete', $lesson->id) }}" role="button">Annuleren</a>
+                                    <a class="btn btn-success" href="{{ route('lessons.publish', $lesson->id) }}" role="button">Actief maken</a>
                                 </div>
                             </li>
                         </ul>
                     </div>
                 </div>
             @empty
-                Er zijn momenteel geen ingeplande lessen.
+                Er zijn momenteel geen lessen in het archief.
             @endforelse
         </div>
     </div>
